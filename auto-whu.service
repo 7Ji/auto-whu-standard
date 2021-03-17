@@ -1,0 +1,12 @@
+[Unit]
+Description=Automatically login to WHU network
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+#It's strongly recommended to create a seperate user to run auto-whu
+#User=auto-whu
+ExecStart=/usr/sbin/auto-whu.sh -c /etc/auto-whu.conf
+
+[Install]
+WantedBy=multi-user.target

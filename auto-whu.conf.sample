@@ -1,0 +1,16 @@
+# This is the configuration file of auto-whu, by default this file should be placed as /etc/auto-whu.conf
+
+# If auto-whu should ignore the systemd check, set to 1 if you just want to use it manually or implement it into a non-systemd environment (This is strongly not recommanded unless you are using OpenWrt, in that case, you should use auto-whu-openwrt instead)
+IGNORE_SYSTEMD='0'
+# If auto-whu should ignore the sanity check for username and network, unless you are using auto-whu in a non-whu environment, you should never set it to 1
+IGNORE_SANITY='0'
+# Username, should be a number of 13 digits, set IGNORE_SANITY to 1 if you want to use non-standard username.
+USERNAME='2017302010000'
+# Password, must be specified, set IGNORE_SANITY to 1 if you want to use empty password(experimental)
+PASSWORD='123456'
+# Network, 0=China CERNET(default), 1=China Telcom, 2=China Unicom, 3=China Mobile,
+NETWORK='1'
+# If you are not using auto-whu in WHU environment, or just for experiment, you may want to specify the network name manually, this overwrites the NETWORK setting above. The numbers 0-3 above each converts to Internet,dianxin,liantong and yidong here in WHU as of 2021.
+NETWORK_MANUAL=''
+# Authorization URL,by default it's set to 'http://172.19.1.9:8080/eportal/InterFace.do?method=login' if empty, DO NOT EDIT THIS UNLESS YOU KNOW WHAT YOU ARE DOING
+URL=''

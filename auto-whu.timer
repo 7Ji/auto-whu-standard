@@ -1,0 +1,12 @@
+[Unit]
+Description=Run auto-whu periodly to check online
+
+[Timer]
+# Immediately authorization after booting up
+OnBootSec=0min
+# How much time should auto-whu wait until re-check if you're online. In this case we wait 1 min.
+OnUnitActiveSec=1min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
