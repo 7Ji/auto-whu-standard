@@ -16,7 +16,7 @@ help () {
     echo "      -n network, single-digit number from 0 to 3, 0 for CERNET, 1 for China Telcom, 2 for China Unicom, 3 for China Mobile"
     echo "      -m a manually specified network name, replace the -n option"
     echo "      -c config file, path to the configuration file"
-    echo "      -u eportal authorization URL, DO NOT SET IT unless you totally understand it"
+    echo "      -a eportal authorization URL, DO NOT SET IT unless you totally understand it"
     echo "      -f foreground mode, ignore the systemd check"
     echo "      -s skip check for sanity for username, password and network"
     echo "      -h print this message"
@@ -37,7 +37,7 @@ while [[ $# -ge 1 ]]; do
     elif [[ "$1" = '-m' ]]; then
         ARG_NETWORK_MANUAL="$2"
         shift
-    elif [[ "$1" = '-u' ]]; then
+    elif [[ "$1" = '-a' ]]; then
         ARG_URL="$2"
         shift
     elif [[ "$1" = '-c' ]]; then
